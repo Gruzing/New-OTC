@@ -53,7 +53,7 @@ OptionPanel
       self:setText(tr('Walk delay after first step: %s ms', value))
 
     $mobile:
-      visible: false
+      visible: true
 
   OptionScrollbar
     id: walkFirstStepDelay
@@ -62,7 +62,7 @@ OptionPanel
     maximum: 300
 
     $mobile:
-      visible: false
+      visible: true
 
   Label
     id: walkTurnDelayLabel
@@ -72,7 +72,7 @@ OptionPanel
       self:setText(tr('Walk delay after turn: %s ms', value))
 
     $mobile:
-      visible: false
+      visible: true
 
   OptionScrollbar
     id: walkTurnDelay
@@ -81,13 +81,13 @@ OptionPanel
     maximum: 300
 
     $mobile:
-      visible: false
+      visible: true
 
   Label
     id: walkCtrlTurnDelayLabel
     margin-top: 10
     $mobile:
-      visible: false
+      visible: true
     @onSetup: |
       local value = modules.client_options.getOption('walkTurnDelay')
       self:setText(tr('Walk delay after ctrl turn: %s ms', value))
@@ -98,7 +98,7 @@ OptionPanel
     minimum: 0
     maximum: 300    
     $mobile:
-      visible: false
+      visible: true
 
   Label
     id: walkStairsDelayLabel
@@ -107,7 +107,7 @@ OptionPanel
       local value = modules.client_options.getOption('walkStairsDelay')
       self:setText(tr('Walk delay after floor change: %s ms', value))
     $mobile:
-      visible: false
+      visible: true
 
   OptionScrollbar
     id: walkStairsDelay
@@ -115,7 +115,7 @@ OptionPanel
     minimum: 0
     maximum: 300
     $mobile:
-      visible: false
+      visible: true
 
   Label
     id: walkTeleportDelayLabel
@@ -124,7 +124,7 @@ OptionPanel
       local value = modules.client_options.getOption('walkTeleportDelay')
       self:setText(tr('Walk delay after teleport: %s ms', value))
     $mobile:
-      visible: false
+      visible: true
 
   OptionScrollbar
     id: walkTeleportDelay
@@ -132,7 +132,7 @@ OptionPanel
     minimum: 0
     maximum: 300
     $mobile:
-      visible: false
+      visible: true
       
   Panel
     height: 30
