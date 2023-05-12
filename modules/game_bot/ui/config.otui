@@ -14,6 +14,10 @@ BotConfig < Panel
     anchors.left: parent.left
     text-offset: 3 0
     width: 130
+    &menuScroll: true
+    &menuHeight: 450
+    &menuScrollStep: 100
+    &parentWidth: true
 
   Button
     id: switch
