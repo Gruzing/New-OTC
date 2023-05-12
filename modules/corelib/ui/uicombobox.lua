@@ -10,6 +10,8 @@ function UIComboBox.create()
   combobox.menuScroll = false
   combobox.menuHeight = 100
   combobox.menuScrollStep = 0
+  combobox.parentWidth = false
+  combobox.removeMargin = false
   return combobox
 end
 
@@ -127,7 +129,12 @@ function UIComboBox:onMousePress(mousePos, mouseButton)
   for i,v in ipairs(self.options) do
     menu:addOption(v.text, function() self:setCurrentOption(v.text) end)
   end
-  menu:setWidth(self:getWidth())
+  if self.parentWidth and self:getParent() then
+    local par = self:getParent()
+    menu:setWidth(par:getWidth() - (self.removeMargin and (par:getMarginLeft() - par:getMarginRight()) or 4))
+  else
+    menu:setWidth(self:getWidth())
+    end
   menu:display({ x = self:getX(), y = self:getY() + self:getHeight() })
   connect(menu, { onDestroy = function() self:setOn(false) end })
   self:setOn(true)
