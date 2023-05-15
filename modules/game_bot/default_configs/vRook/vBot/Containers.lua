@@ -9,23 +9,23 @@ if type(storage[panelName]) ~= "table" then
             {
                 value = "Main Backpack",
                 enabled = true,
-                item = 9601,
-                min = false,
-                items = { 3081, 3048 }
+                item = 2864,
+                min = true,
+                items = {}
             },
             {
-                value = "Runes",
+                value = "BPs",
                 enabled = true,
                 item = 2866,
                 min = true,
-                items = { 3161, 3180 }
+                items = {}
             },
             {
-                value = "Money",
+                value = "Healing",
                 enabled = true,
-                item = 2871,
+                item = 2869,
                 min = true,
-                items = { 3031, 3035, 3043 }
+                items = {}
             },
             {
                 value = "Purse",
