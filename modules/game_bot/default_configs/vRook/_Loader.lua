@@ -28,7 +28,6 @@ local luaFiles = {
   "alarms",
   "Conditions",
   "Equipper",
-  "pushmax",
   "combo",
   "HealBot",
   "new_healer",
@@ -36,22 +35,14 @@ local luaFiles = {
   "ingame_editor",
   "Dropper",
   "Containers",
-  "quiver_manager",
-  "quiver_label",
   "tools",
-  "antiRs",
   "depot_withdraw",
   "eat_food",
   "equip",
-  "exeta",
   "analyzer",
   "spy_level",
   "supplies",
-  "depositer_config",
-  "npc_talk",
-  "xeno_menu",
-  "hold_target",
-  "cavebot_control_panel"
+  "depositer_config"
 }
 
 for i, file in ipairs(luaFiles) do
