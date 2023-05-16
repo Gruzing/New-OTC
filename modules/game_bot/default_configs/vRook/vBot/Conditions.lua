@@ -27,21 +27,21 @@ Panel
   if not HealBotConfig[panelName] then
     HealBotConfig[panelName] = {
       enabled = false,
-      curePosion = false,
+      curePosion = true,
       poisonCost = 20,
       cureCurse = false,
       curseCost = 80,
       cureBleed = false,
       bleedCost = 45,
-      cureBurn = false,
+      cureBurn = true,
       burnCost = 30,
       cureElectrify = false,
       electrifyCost = 22,
-      cureParalyse = false,
+      cureParalyse = true,
       paralyseCost = 40,
       paralyseSpell = "utani hur",
-      holdHaste = false,
-      hasteCost = 40,
+      holdHaste = true,
+      hasteCost = 4,
       hasteSpell = "utani hur",
       holdUtamo = false,
       utamoCost = 40,
@@ -248,8 +248,8 @@ Panel
       elseif config.cureElectrify and mana() >= config.electrifyCost and isEnergized() then say("exana vis") 
       end
     end
-    if (not config.ignoreInPz or not isInPz()) and config.holdUtura and mana() >= config.uturaCost and canCast(config.uturaType) and hppercent() < 90 then say(config.uturaType)
-    elseif (not config.ignoreInPz or not isInPz()) and config.holdUtana and mana() >= config.utanaCost and (not utanaCast or (now - utanaCast > 120000)) then say("utana vid") utanaCast = now
+    if (not config.ignoreInPz or not isInFight()) and config.holdUtura and mana() >= config.uturaCost and canCast(config.uturaType) and hppercent() < 90 then say(config.uturaType)
+    elseif (not config.ignoreInPz or not isInFight()) and config.holdUtana and mana() >= config.utanaCost and (not utanaCast or (now - utanaCast > 120000)) then say("utana vid") utanaCast = now
     end
   end)
 
